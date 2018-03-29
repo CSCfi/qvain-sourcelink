@@ -32,7 +32,7 @@ func main() {
 			fmt.Println("")
 			fmt.Println("Cgit upstream")
 			fmt.Println("\t$", os.Args[0], "git://git.zx2c4.com/WireGuard/ 07a03cbc8d186f985bcccede99fc3547f23868d8 jd/no-inline")
-			fmt.Println("\thttps://git.zx2c4.com/WireGuard/tree/?h=jd\x252Fno-inline&id=07a03cbc8d186f985bcccede99fc3547f23868d8")
+			fmt.Println("\thttps://git.zx2c4.com/WireGuard/tree/?h=jd%2Fno-inline&id=07a03cbc8d186f985bcccede99fc3547f23868d8")
 			fmt.Println("")
 		}
 		os.Exit(1)
