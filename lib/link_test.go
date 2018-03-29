@@ -21,7 +21,7 @@ func TestMakeSourceLink(t *testing.T) {
 		{name: "github (ssh)", params: []string{"git@github.com:user/repo.git", "abcdef", "master"}, exp: "https://github.com/user/repo/tree/abcdef"},
 		{name: "cgit (http) [TrailingSlash QueryEscape]", params: []string{"https://git.zx2c4.com/WireGuard/", "abcdef", "jd/no-inline"}, exp: "https://git.zx2c4.com/WireGuard/tree/?h=jd%2Fno-inline&id=abcdef"},
 		{name: "unknown repo", params: []string{"git@example.com:user/repo", "abcdef", "master"}, exp: ""},
-		{name: "cgit (git)", params: []string{"git://git.zx2c4.com/WireGuard", "abcdef", "master"}, exp: "https://git.zx2c4.com/WireGuard/tree/?h=jd%2Fno-inline&id=abcdef"},
+		{name: "cgit (git)", params: []string{"git://git.zx2c4.com/WireGuard", "abcdef", "master"}, exp: "https://git.zx2c4.com/WireGuard/tree/?h=master&id=abcdef"},
 	}
 
 	for _, test := range tests {
