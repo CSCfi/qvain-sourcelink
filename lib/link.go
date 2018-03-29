@@ -10,14 +10,14 @@ import (
 	"strings"
 )
 
-// HttpPrefix is the prefix added to generated http(s) links.
-const HttpPrefix = "https"
+// httpPrefix is the prefix added to generated http(s) links.
+const httpPrefix = "https"
 
-// RepoFunc is a function that takes url, hash and branch string arguments and returns a new url.
-type RepoFunc func(url, hash, branch string) string
+// repoFunc is a function that takes url, hash and branch string arguments and returns a new url.
+type repoFunc func(url, hash, branch string) string
 
 // For these repo types we know how to make a direct link to the source tree.
-var treeFor = map[string]RepoFunc{
+var treeFor = map[string]repoFunc{
 	"github": func(url, hash, branch string) string {
 		return url + "/tree/" + neturl.PathEscape(hash)
 	},
@@ -127,7 +127,7 @@ func MakeSourceLink(url, hash, branch string) string {
 
 		// change the scheme to http for non-http urls
 		if !isHttp {
-			parsed.Scheme = HttpPrefix
+			parsed.Scheme = httpPrefix
 			url = parsed.String()
 		}
 		host = parsed.Hostname()
@@ -136,7 +136,7 @@ func MakeSourceLink(url, hash, branch string) string {
 		_, host, path = parseScpUrl(url)
 
 		if host != "" {
-			url = HttpPrefix + "://" + host + "/" + strings.TrimSuffix(path, ".git")
+			url = httpPrefix + "://" + host + "/" + strings.TrimSuffix(path, ".git")
 		}
 	}
 
@@ -145,7 +145,7 @@ func MakeSourceLink(url, hash, branch string) string {
 		return tertiary(isHttp, url, "")
 	}
 
-	var fn RepoFunc
+	var fn repoFunc
 	switch host {
 	case "github.com":
 		fn = treeFor["github"]
