@@ -1,3 +1,7 @@
+// Command sourcelink tries to return a link to the source tree for a given hash and base repository path.
+//
+// It will try to convert git://, ssh:// and scp-style user@host.name:path.git links to http urls.
+// If it fails to convert the url, it will print the given repo url and return with a non-zero exit code.
 package main
 
 import (
