@@ -1,0 +1,5 @@
+language: go
+# only test earliest go 1.8 and latest stable
+go:
+  - "1.8.x"
+  - "1.x"
