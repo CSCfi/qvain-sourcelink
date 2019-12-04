@@ -1,6 +1,6 @@
-[![GoDoc](https://godoc.org/github.com/wvh/sourcelink/lib?status.svg)](https://godoc.org/github.com/wvh/sourcelink/lib)
-[![Build Status](https://travis-ci.org/wvh/sourcelink.svg?branch=master)](https://travis-ci.org/wvh/sourcelink)
-[![Go Report Card](https://goreportcard.com/badge/github.com/wvh/sourcelink)](https://goreportcard.com/report/github.com/wvh/sourcelink)
+[![GoDoc](https://godoc.org/github.com/CSCfi/qvain-sourcelink/lib?status.svg)](https://godoc.org/github.com/CSCfi/qvain-sourcelink/lib)
+[![Build Status](https://travis-ci.org/CSCfi/qvain-sourcelink.svg?branch=master)](https://travis-ci.org/CSCfi/qvain-sourcelink)
+[![Go Report Card](https://goreportcard.com/badge/github.com/CSCfi/qvain-sourcelink)](https://goreportcard.com/report/github.com/CSCfi/qvain-sourcelink)
 
 # sourcelink
 
